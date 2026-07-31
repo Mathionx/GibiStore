@@ -1,0 +1,78 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Gibi Store — Buy, Sell &amp; Trade on Campus</title>
+<meta name="description" content="Buy, sell & trade with students on your campus. ETB pricing, campus-verified sellers." />
+<meta name="theme-color" content="#2563EB" />
+<link rel="manifest" href="manifest.json" />
+<link rel="apple-touch-icon" href="icons/icon-192.png" />
+<link rel="icon" href="icons/icon-192.png" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<div id="offline-banner" class="offline-banner hidden">
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 2 20 20"/><path d="M8.5 16.5a5 5 0 0 1 7 0"/><path d="M5 13a10 10 0 0 1 3-2.1M19 13a10 10 0 0 0-4.6-2.7"/><path d="M2 8.8a15 15 0 0 1 4-2.5M22 8.8a15 15 0 0 0-8-4.3"/><path d="M12 20h.01"/></svg>
+  <span>You're offline — showing saved content</span>
+</div>
+
+<div id="app-shell">
+  <!-- Router injects the current "page" here -->
+  <div id="view-root"></div>
+
+  <!-- Persistent chrome: stays mounted across navigations so it never flickers -->
+  <button class="fab hidden" id="fab-sell" title="Sell an item" type="button">+</button>
+
+  <nav class="bottom-nav hidden" id="bottom-nav">
+    <button class="nav-item" data-page="home" type="button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg>
+      Home
+    </button>
+    <button class="nav-item" data-page="sell" type="button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+      Sell
+    </button>
+    <button class="nav-item" data-page="orders" type="button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16l-1.5 12h-13z"/><path d="M8 7V5a4 4 0 0 1 8 0v2"/></svg>
+      Orders
+    </button>
+    <button class="nav-item" data-page="profile" type="button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4.5 5-6 8-6s6.5 1.5 8 6"/></svg>
+      Profile
+    </button>
+    <button class="nav-item hidden" id="nav-admin" data-page="admin" type="button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 3 6v6c0 5 4 8.5 9 10 5-1.5 9-5 9-10V6z"/></svg>
+      Admin
+    </button>
+  </nav>
+</div>
+
+<div id="modal-root"></div>
+<div id="toast-container"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="js/config.js"></script>
+<script src="js/icons.js"></script>
+<script src="js/router.js"></script>
+<script src="js/notifications.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/lightbox.js"></script>
+<script src="js/order.js"></script>
+<script src="js/view-auth.js"></script>
+<script src="js/view-home.js"></script>
+<script src="js/view-listing.js"></script>
+<script src="js/view-sell.js"></script>
+<script src="js/view-orders.js"></script>
+<script src="js/view-profile.js"></script>
+<script src="js/view-seller.js"></script>
+<script src="js/view-rewards.js"></script>
+<script src="js/view-search.js"></script>
+<script src="js/view-admin.js"></script>
+<script src="js/view-owner.js"></script>
+<script src="js/view-help.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
